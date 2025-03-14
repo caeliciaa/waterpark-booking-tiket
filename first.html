@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Website dengan Background Gambar</title>
+    <style>
+        body {
+            background-image: url('waterpark.jpeg'); /* Sesuaikan dengan lokasi file */
+            background-size: cover; /* Agar gambar menyesuaikan layar tanpa berulang */
+            background-position: center; /* Agar gambar tetap di tengah */
+            background-repeat: no-repeat; /* Mencegah gambar berulang */
+            height: 100vh; /* Agar background memenuhi layar */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white; /* Ubah warna teks agar terlihat jelas */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.795); /* Tambahkan efek transparan di atas gambar */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Gaya untuk layar yang lebih kecil (seperti ponsel) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Atur ukuran font lebih kecil untuk ponsel */
+    body {
+        font-size: 14px;
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>FORM PEMESANAN TIKET</h1>
+        <p>CUSSS Pilih Jenis Tiketnya!</p>
+        <a href="second.html">Dewasa</a> <br>
+        <a href="third.html">Anak-Anak</a>
+    </div>
+</body>
+</html>

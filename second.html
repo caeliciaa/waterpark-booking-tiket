@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIKET DEWASA</title>
+</head>
+<body>
+    <body style="background-color:powderblue;"></body>
+    <h2 style="text-align:center;"><b>TIKET DEWASA</b></h2>
+    <table name="infotiket">
+        <tr>
+            <td>Nama: <input type="text"></td> 
+        </tr>
+        <tr>
+            <td>Email: <input type="text"></td> 
+        </tr>
+        <tr>
+            <td>Pilih tanggal: <input type="date"></td>
+        </tr>
+        <tr>
+            <td>
+        Jenis Tiket:
+        <select id="jenisTiket" onchange="tampilkanHarga()">
+            <option value="" disabled selected>Pilih tiket</option>
+            <option value="150000">Reguler - Rp 250.000</option>
+            <option value="200000">VIP - Rp 275.000</option>
+            <option value="300000">VVIP - Rp 300.000</option>
+        </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <label for="jumlahTiket">Jumlah Tiket:</label>
+        <input type="number" id="jumlahTiket" min="1" value="1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+        Harga per Tiket: Rp <span id="hargaTiket">0</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        Total Harga: Rp <span id="totalHarga">0</span><br>
+        <button onclick="hitungTotal()">Hitung Total</button>
+            </td>
+        </tr>
+      <script> 
+        function tampilkanHarga() {
+            let hargaTiket = document.getElementById("jenisTiket").value;
+            document.getElementById("hargaTiket").innerText = hargaTiket;
+        }
+
+        function hitungTotal() {
+            let hargaTiket = parseInt(document.getElementById("jenisTiket").value) || 0;
+            let jumlahTiket = parseInt(document.getElementById("jumlahTiket").value) || 0;
+            let total = hargaTiket * jumlahTiket;
+            document.getElementById("totalHarga").innerText = total;
+        }
+    </script>
+    <tr>
+        <td>
+            No. rekening: 1234567 
+        </td>
+    </tr>
+ <tr>
+    <td>
+Metode Pembayaran:</label>
+<select id="metode" onchange="tampilkanMetodePembayaran()">
+    <option value="" disabled selected>Pilih metode</option>
+    <option>GOPAY</option>
+    <option>OVO</option>
+    <option>BCA</option>
+</select>
+    </td>
+</tr>
+<tr>
+    <td>
+        <a href="4.html">Confirm</a></button>
+    </td>
+</tr>
+</table>
+</body>
+</html>
